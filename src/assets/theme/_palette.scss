@@ -1,6 +1,4 @@
-/* Coolors Exported Palette - coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557 */
 
-/* RGB */
 $color1: rgb(167, 40, 51);
 $color2: rgb(222, 230, 219);
 $color3: rgb(123, 195, 197);
@@ -14,5 +12,17 @@ $color03: #f9f9f9;
 $color04: #269f42cd;
 $color05: #bbc4ca;
 $color06: #0365d6de;
+
+
+$bg-primary:        $color03;
+$bg-secondary:      $color02;
+$bg-success:        $color04;
+$bg-card-primary:   $color00;
+
+$color-primary:     $color01;
+$color-secondary:   $color00;
+$color-link-primary: $color06;
+
+$border-primary:    $color05;
 
 
