@@ -1,0 +1,44 @@
+
+.card {
+    display: flex;
+    padding: 15px;
+
+    &__image {
+        border-radius: 3px;
+        margin-top: 5px;
+    }
+
+    &__header {
+        align-self: flex-start;
+        margin-bottom: 10px;
+    }
+
+    &__body {
+        margin-bottom: 15px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &-inline {
+        display: inline;
+    }
+}
+
+.card__paragraph {
+    margin: 5px 0;
+    white-space: normal;
+}
+
+.card__primary {
+    background: $bg-card-primary;
+    border: 1px solid $border-primary;
+}
