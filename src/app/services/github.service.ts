@@ -66,7 +66,7 @@ export class GithubService {
       return {
         id: repository.id,
         name: repository.name,
-        avatarPicture: repository.owner.avatar_url,
+        ownerPicture: repository.owner.avatar_url,
         description: repository.description,
         private: repository.private,
         forks: repository.forks,

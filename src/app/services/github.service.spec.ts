@@ -3,7 +3,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { GithubService } from './github.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Repository } from '../models/repository';
+import { Repository } from '../models/repository.interface';
 
 describe('GithubService', () => {
   let githubService: GithubService;
@@ -70,7 +70,7 @@ describe('GithubService', () => {
       name: 'Name',
       description: 'Description',
       private: false,
-      html_url: 'http://someUrl.com',
+      html_url: 'http://xpto.com',
       stargazers_count: 2,
       watchers_count: 1,
       language: 'Java',
@@ -78,8 +78,8 @@ describe('GithubService', () => {
       fork: false,
       owner: {
         login: 'login',
-        avatar_url: 'http://avatarUrl.com',
-        html_url: 'https://htmlurl.com'
+        avatar_url: 'http://avatarxpto.com',
+        html_url: 'https://htmlurlxpto.com'
       }
     };
 
