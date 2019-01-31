@@ -1,0 +1,16 @@
+<section class="login">
+    <div class="card card__primary login__card">
+        <h3>Logar:</h3>
+        <a class="button button__primary"
+           *ngIf="githubUrl"
+           [href]="githubUrl">
+           GitHub
+           <i class="fa fa-github fa-lg"></i>
+        </a>
+        <a class="button button__primary button__primary-disabled"
+           *ngIf="!githubUrl">
+           GitHub
+           <i class="fa fa-github fa-lg"></i>
+        </a>
+    </div>
+</section>
