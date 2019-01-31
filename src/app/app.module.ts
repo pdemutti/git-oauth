@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/common/app/app.component';
 import { HomeComponent } from '../app/components/feature/home/home.component';
+import { LoginComponent } from '../app/components/feature/login/login.component';
 
 import { HeaderComponent } from './components/common/header/header.component';
 import { RepositoryComponent } from './components/common/repository/repository.component';
@@ -14,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
     HeaderComponent,
     RepositoryComponent,
   ],
