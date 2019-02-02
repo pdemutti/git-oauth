@@ -28,11 +28,6 @@ const authOptions = {
   }
 };
 
-const options = {
-    url: 'https://api.github.com',
-    headers: {}
-};
-
 app.use(morgan('tiny'));
 
 
@@ -69,12 +64,17 @@ app.use('/api/login_url', (req, res) => {
 });
 
 app.use('/api', (req, res) => {
+    let options = {
+        url: 'https://api.github.com',
+        headers: {}
+    };
     const url = `${options.url}${req.url}`;
     const headers = {
         'authorization': req.headers['authorization'],
         'user-agent': 'alexandressh'
     };
-    const options = {...options, url};
+    
+    options = {...options, url};
     options.headers = headers;
 
     request(options).pipe(res);
