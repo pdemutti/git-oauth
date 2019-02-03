@@ -29,9 +29,11 @@
 
 .button__link {
     color: $color-link-primary;
-
-    &:hover {
-        text-decoration: underline;
+    &:last-child {
+			color: $color-primary;
+			&:hover {
+				color: $color02;
+			}
     }
 }
 
