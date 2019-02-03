@@ -23,11 +23,11 @@ describe('HomeResolverService', () => {
     githubServiceMock.getRepositories.and.returnValue($q);
   });
 
-  it('should be created', () => {
+  it('Component should be created', () => {
     expect(homeResolverService).toBeTruthy();
   });
 
-  it('should retrieve repositories details', () => {
+  it('Component should retrieve repositories details', () => {
     homeResolverService.resolve(null, null);
     expect(githubServiceMock.getRepositories).toHaveBeenCalled();
   });

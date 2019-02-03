@@ -28,12 +28,12 @@ describe('GithubService', () => {
     httpTestingController.verify();
   });
 
-  it('should be created', inject([GithubService], (service: GithubService) => {
+  it('Component should be created', inject([GithubService], (service: GithubService) => {
     expect(service).toBeTruthy();
   }));
 
-  it('should getGithubLoginUrl()', () => {
-    const url = 'http://someurl.com';
+  it('Service should call getGithubLoginUrl fuction', () => {
+    const url = 'http://api.com';
     const expectedData = { url };
 
     githubService.getGithubLoginUrl().subscribe(data => {
@@ -44,7 +44,7 @@ describe('GithubService', () => {
     req.flush(expectedData);
   });
 
-  it('should getToken()', () => {
+  it('Service should call getToken function', () => {
     const code = 'someCode';
     const access_token = 'tokenFromServeer';
     const expectedData = { access_token };
@@ -61,7 +61,7 @@ describe('GithubService', () => {
     req.flush(expectedData);
   });
 
-  it('should getRepositories()', () => {
+  it('Service should call getRepositories function', () => {
     const code = 'someCode';
     const access_token = 'tokenFromServeer';
     const expectedToken = { access_token };
@@ -101,7 +101,7 @@ describe('GithubService', () => {
     reqRepo.flush(repositories);
   });
 
-  it('should isUserLoggedIn', () => {
+  it('Service should call isUserLoggedIn function', () => {
     const code = 'someCode';
     const access_token = 'tokenFromServeer';
     const expectedData = { access_token };

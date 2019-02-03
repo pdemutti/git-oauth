@@ -34,18 +34,18 @@ describe('AuthenticationGuard', () => {
 
   });
 
-  it('should be instantiated', () => {
+  it('Component should be instantiated', () => {
     expect(guard).toBeTruthy();
   });
 
-  it('should be able to activate route', () => {
+  it('Guard should be able to activate routes', () => {
     githubServiceMock.isUserLoggedIn.and.returnValue(true);
     const canActivate = guard.canActivate(null, null);
 
     expect(canActivate).toBeTruthy();
   });
 
-  it('should not be able to activate route', () => {
+  it('Guard should not be able to activate routes', () => {
     githubServiceMock.isUserLoggedIn.and.returnValue(false);
     const canActivate = guard.canActivate(null, null);
 

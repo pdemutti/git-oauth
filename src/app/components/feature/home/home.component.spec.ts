@@ -48,11 +48,11 @@ describe('HomeComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it('Component should be created', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should receive data from route', () => {
+  it('Component should receive data from route', () => {
     const repos = [repoInfo];
     const repoData = {
       repos

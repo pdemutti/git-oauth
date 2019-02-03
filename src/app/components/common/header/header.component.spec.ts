@@ -43,11 +43,11 @@ describe('HeaderComponent', () => {
     toastrMock = TestBed.get(ToastrService);
   });
 
-  it('should be instantiated', () => {
+  it('Component should be instantiated', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should recognize logged in user', () => {
+  it('Component should recognize logged in user', () => {
     const $q = cold('----x|', {x: true});
 
     githubServiceMock.getTokenEventEmitter.and.returnValue($q);
@@ -60,7 +60,7 @@ describe('HeaderComponent', () => {
     expect(compiled.querySelector('a').textContent).toContain('Sair');
   });
 
-  it('should recognize logged in user after new token emition', () => {
+  it('Header should recognize logged user after token has emited', () => {
     const $q = cold('----x|', {x: 'asdf'});
 
     githubServiceMock.getTokenEventEmitter.and.returnValue($q);
@@ -75,7 +75,7 @@ describe('HeaderComponent', () => {
     expect(component.isLoggedIn).toBeTruthy();
   });
 
-  it('should recognize logged out user after new token emition', () => {
+  it('Header should recognize logged out user after token has emited', () => {
     const $q = cold('----x|', {x: ''});
 
     githubServiceMock.getTokenEventEmitter.and.returnValue($q);
@@ -90,7 +90,7 @@ describe('HeaderComponent', () => {
     expect(component.isLoggedIn).toBeFalsy();
   });
 
-  it('should logout user and redirect to login', () => {
+  it('Header should logout user and redirect to login page', () => {
     const $q = cold('----x|', {x: ''});
 
     githubServiceMock.getTokenEventEmitter.and.returnValue($q);

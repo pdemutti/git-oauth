@@ -11,15 +11,15 @@ describe('RepositoryComponent', () => {
     name: 'Test repo',
     description: 'Description',
     private: false,
-    url: 'urlhere',
+    url: 'url',
     stargazers: 1,
     watchers: 2,
     language: 'javascript',
     forks: 1,
     isFork: false,
-    ownerPicture: 'urlHere',
-    ownerName: 'Name Here',
-    ownerUrl: 'Urlhere'
+    ownerPicture: 'url',
+    ownerName: 'Name',
+    ownerUrl: 'url'
   };
 
   beforeEach(async(() => {
@@ -35,17 +35,15 @@ describe('RepositoryComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Component should be created', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should show repo info', () => {
+  it('Component should compile repository details', () => {
       component.repo = repoInfo;
       fixture.detectChanges();
 
       const compiled = fixture.debugElement.nativeElement;
-
-      // Testing if description is on the HTML
       expect(compiled.querySelector('p').textContent).toContain(repoInfo.description);
   });
 });
