@@ -57,7 +57,7 @@ describe('HeaderComponent', () => {
 
     expect(component.isLoggedIn).toBeTruthy();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('a').textContent).toContain('Logout');
+    expect(compiled.querySelector('a').textContent).toContain('Sair');
   });
 
   it('should recognize logged in user after new token emition', () => {
