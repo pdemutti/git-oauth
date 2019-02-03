@@ -1,4 +1,4 @@
-<div class="card" *ngIf="repo">
+<div class="card repo-card" *ngIf="repo">
   <img [src]="repo.ownerPicture" alt="" class="card__image" width="32" height="32">
 
   <div class="repo__card">
@@ -35,8 +35,6 @@
         {{repo.watchers}}
         <i class="fa fa-star icon"></i>
         {{repo.stargazers}}
-        <i class="fa fa-code-fork icon"></i>
-        {{repo.forks}}
       </span>
     </div>
   </div>
