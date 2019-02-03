@@ -12,13 +12,13 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'callback', component: CallbackComponent },
-  { 
-    path: 'home', 
-    component: HomeComponent, 
-    canActivate: [ AuthenticationGuard ], 
-    resolve: { 
-      repos: HomeResolverService 
-    } 
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [ AuthenticationGuard ],
+    resolve: {
+      repos: HomeResolverService
+    }
   },
   { path: '**', component: LoginComponent }
 ];

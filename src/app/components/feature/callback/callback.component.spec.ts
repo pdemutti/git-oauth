@@ -12,7 +12,7 @@ describe('CallbackComponent', () => {
 
   let activatedRoute: ActivatedRouteStub;
   let githubServiceMock: jasmine.SpyObj<GithubService>;
-  
+
   let routerMock: jasmine.SpyObj<Router>;
   let toastrMock: jasmine.SpyObj<ToastrService>;
 
