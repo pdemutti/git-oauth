@@ -84,7 +84,7 @@ app.use('/', express.static(`${prodPrefix}github-integration`));
 app.use('/callback', express.static(`${prodPrefix}github-integration`));
 app.use('/home', express.static(`${prodPrefix}github-integration`));
 
-app.listen(port, () => {
+app.listen(port | 5000, () => {
     console.log(`App rodando na porta ${port}!`);
     console.log(`Modo ${isProd ? 'PRODUCAO': 'DEV'}!`)
 });
