@@ -10,7 +10,7 @@ const port = 4000;
 require('dotenv').config();
 
 const idCLient = process.env.CLIENT_ID;
-const isProd = 'prod';
+const isProd = process.env.ENV === 'prod';
 const prodPrefix = isProd ? '' : 'dist/';
 
 const body = {
