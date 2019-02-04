@@ -10,7 +10,7 @@ const port = 4000;
 require('dotenv').config();
 
 const idCLient = process.env.CLIENT_ID;
-const isProd = process.env.ENV === 'prod';
+const isProd = 'prod';
 const prodPrefix = isProd ? '' : 'dist/';
 
 const body = {
@@ -84,7 +84,7 @@ app.use('/', express.static(`${prodPrefix}github-integration`));
 app.use('/callback', express.static(`${prodPrefix}github-integration`));
 app.use('/home', express.static(`${prodPrefix}github-integration`));
 
-app.listen(port || 5000, () => {
+app.listen(port | 5000, () => {
     console.log(`App rodando na porta ${port}!`);
     console.log(`Modo ${isProd ? 'PRODUCAO': 'DEV'}!`)
 });
