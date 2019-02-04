@@ -1,0 +1,46 @@
+
+.button {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.button__primary {
+    background-color: $bg-success;
+    background-image: linear-gradient(-180deg, lighten($bg-success, 7.5%) 0%, $bg-success 90%);
+    color: $color-secondary;
+
+    &:hover {
+        background-image: none;
+    }
+
+    &-disabled {
+        background-image: none;
+        opacity: 0.7;
+
+        &:hover {
+            
+            pointer-events: none;
+        }
+    }
+}
+
+.button__link {
+    color: $color-link-primary;
+    &:last-child {
+			color: $color-primary;
+			&:hover {
+				color: $color02;
+			}
+    }
+}
+
+.button-dark__link {
+    color: darken($color-secondary, 7%);
+
+    &:hover {
+        color: $color-secondary;
+    }
+}

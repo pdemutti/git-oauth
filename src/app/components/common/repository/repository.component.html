@@ -1,0 +1,43 @@
+<div class="card repo-card" *ngIf="repo">
+  <img [src]="repo.ownerPicture" alt="" class="card__image" width="32" height="32">
+
+  <div class="repo__card">
+    <div class="card__header">
+      <a [href]="repo.ownerUrl" target="__blank" class="button__link">
+        <h3 class="card__text card__text-inline" title="{{repo.ownerUrl}}">
+          {{repo.ownerName}}
+        </h3>
+      </a>
+      <h3 class="card__text-inline">/</h3>
+      <a [href]="repo.url" target="__blank" class="button__link">
+        <h3 class="card__text card__text-inline" title="{{repo.name}}">
+          {{repo.name}}
+        </h3>
+      </a>
+    </div>
+
+    <div class="card__body">
+      <span class="card__text" *ngIf="repo.private">Private</span>
+      <span class="card__text" *ngIf="!repo.private">Public</span>
+
+      <p class="card__paragraph">{{repo.description || 'No description provided'}}</p>
+    </div>
+
+
+    <div class="card__footer">
+      <span>
+        <i *ngIf="repo.language" class="fa fa-circle icon"></i>
+        {{repo.language}}
+      </span>
+
+      <span class="card__text">
+        <i class="fa fa-eye icon"></i>
+        {{repo.watchers}}
+        <i class="fa fa-star icon"></i>
+        {{repo.stargazers}}
+        <i class="fa fa-code-fork icon"></i>
+        {{repo.forks}}
+      </span>
+    </div>
+  </div>
+</div>
